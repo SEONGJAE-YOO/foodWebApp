@@ -1,0 +1,39 @@
+<div class="row-fluid"  id="message-board">
+	<div class="span12">
+		<table class="table table-bordered table-striped">
+			<caption></caption></br>
+			<thead>
+				<tr>
+					<th class="span2">맛집 명</th>
+					<th class="span2">&emsp;&emsp;&emsp;&emsp;</th><td>내용</td>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<% if (models.length>0) {
+					_.each(models, function (value,key, list) { %>
+						<tr>
+							<td><%= value.attributes.username %></td>
+							<td><%= value.attributes.message %></td>
+							
+						</tr>
+					<% });               
+				}              
+				else { %>
+				<tr>
+					<td colspan="2">No messages yet</td>						
+				</tr>
+				<%}%>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="row-fluid"  id="new-message">
+	<div class="span12">
+		<form class="well form-inline">
+		  <input type="text" name="username" class="input-small" placeholder="Username" />
+		  <input type="text" name="message" class="input-small" placeholder="Message Text" />
+		  <a id="send" class="btn btn-primary">입력</a>
+		</form>
+	</div>
+</div>
