@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+<head>  
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1.0, width=device-width">
 <title>맛집 앱</title>
@@ -66,30 +66,8 @@
 	    });  
 	  });
 </script>        
+  
 
-
-<script>
-	$(document).ready(function() {
-		initCordova();
-		
-		$('#btnLocationSearch').click(function() {
-			getMyLocation();
-		});
-		$('#btnAddressSearch').click(function() {
-			getMapAddress();
-		});			
-		$('#btnRouteSearch').click(function() {
-			getMyRoute();
-		});			
-	});	
-	
-   function initCordova() {
- 		document.addEventListener('deviceready', onDeviceReady, true);
-	}   
-   function onDeviceReady() {
-		navigator.notification.alert('장치 준비됨', null, '코르도바 API');
-	}  
-</script>
 <script> 	  
 	// 전역변수
 	var db = null;     		// DB 객체
@@ -238,7 +216,7 @@ li {
 	<div data-role="page" id="mainPage">
 		<div data-role="header" data-position="fixed">
 			<h1>직장인들을 위한 맛집 정보</h1>
-			<a href="#page1" data-icon="home" data-iconpos="notext"
+			<a href="food.html" data-icon="home" data-iconpos="notext"
 				class="ui-btn-right">Home</a>
 		</div>
 		<div data-role="content">
@@ -283,8 +261,7 @@ li-count">베스트
 					data-icon="search" rel="external"><span class="ui-
 li-count">오늘의 먹거리 추천</span></a></li>
 
-                            <li><a href="tel:01041324060" target="_blank"><span class="ui-
-li-count">고객센터 </span></a></li>
+                          
 
                             <li><a href="index.html" data- transition="slidedown"
 					data-icon="search" rel="external"><span class="ui-
@@ -293,6 +270,14 @@ li-count">맛집추천</span></a></li>
                            <li><a href="famous.html" data- transition="slidedown"
 					data-icon="search" rel="external"><span class="ui-
 li-count">유명한맛집</span></a></li>
+
+                            <li><a href="flickr_photo_binding.html" data- transition="slidedown"
+					data-icon="search" rel="external"><span class="ui-
+li-count">퇴근 후 가기좋은 맛집</span></a></li>
+			
+			  <li><a href="tel:01041324060" target="_blank"><span class="ui-
+li-count">고객센터 </span></a></li>
+			
 			</ul>  
 		</div>
 		<div data-role="footer" data-fullscreen="true" class="ui-bar"
@@ -710,27 +695,7 @@ media; gyroscope; picture-in-picture"
 			</div>
 		</div>
 	</div>
-<div data-role="page" id="myLocationSearchPage" data-position="fixed" >
-	<div data-role="header">
-		<h1>Cordova API</h1>
-	</div>	
-	<div data-role="content">
-		<div id="box1" class="ui-bar ui-bar-a">
-			위도 : <br/> 경도 :
-		</div>	
-		<input id="btnLocationSearch" type="button" value="현재 위치 맵 표시">
-		<div id="mapArea1"></div>		
- 	</div>										
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#myLocationSearchPage">현위치검색</a></li>
-				<li><a href="#mapAddressSearchPage">지도검색</a></li>
-				<li><a href="#myRouteSearchPage">경로검색</a></li>
-			</ul>
-		</div>
-	</div>		
-</div> 	
+ 	
  	<div data-role="page" id="coupon">
 		<div data-role="header" data-position="fixed">
 			<a href="#" data-icon="back" data-rel="back" data-direction="reverse">Back</a>
